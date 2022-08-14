@@ -1,16 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    blogContainer = document.querySelector('.blog_container');
+    blogContainer = document.querySelector('.main_blog_container');
 
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(arr => {
-            arr.forEach(item => {
-                const post = `<div class="post_container">
-                    <h2 class="title">${item.title}</h2>
-                    <p class="body">${item.body}</p>
+            let firstBlockElemeents = '';
+            for (let i = 0; i < 4; i++) {
+                let post = `<div class="post_container">
+                    <div class="pic"></div>
+                    <div class="small_wraps_sec_container">
+                        <h2 class="title">${arr[i].title}</h2>
+                        <p class="text">${arr[i].body}</p>
+                    </div>
+                    
                 </div>`;
-                
-                blogContainer.innerHTML += post;
-            })
+
+                if (i === 0) {
+                    post = `<div class="first_post_container">
+                        ${post}
+                    </div>`;
+                } else if (i === 1) {
+                    post = `<div class="second_post_container">
+                        ${post}`;
+                } else if (i === 3) {
+                    post = `${post}</div>`;
+                }
+
+                firstBlockElemeents += post;
+            }
+            blogContainer.innerHTML = firstBlockElemeents;
         })
 });
