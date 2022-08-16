@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < 4; i++) {
                 let post = `<div class="post_container">
                     <div class="pic"></div>
-                    <div class="small_wraps_sec_container">
+                    <div class="wrapper_text">
                         <h2 class="title">${arr[i].title}</h2>
                         <p class="text">${arr[i].body}</p>
                     </div>
