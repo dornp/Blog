@@ -37,13 +37,13 @@ h1 {
     margin-bottom: 50px;
 }
 
-.first_post_container .title {
+.first_post_container .wrapper_text .title {
     font-size: 40px;
     padding-bottom: 30px;
 }
 
-.first_post_container .text {
-    font-size: 20px;
+.first_post_container .wrapper_text .text {
+    font-size: 25px;
 }
 
 .first_post_container .wrapper_text {
@@ -63,9 +63,18 @@ h1 {
 
 }
 
-.wrapper_text {
+.second_post_container .wrapper_text {
     flex: 1;
     padding-left: 30px;
+}
+
+.second_post_container .wrapper_text .title {
+    font-size: 30px;
+}
+
+.second_post_container .wrapper_text .text {
+    padding-top: 15px;
+    font-size: 20px;
 }
 
 .second_post_container .pic {
@@ -84,4 +93,130 @@ h1 {
 
 .second_post_container .post_container:last-child {
     border: none;
+}
+
+/* second screen */
+
+.second_blog_container {
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding: 80px 120px;
+}
+
+.second_blog_container .mini_post_container {
+    flex: 1;
+    padding: 0 30px;
+    border-left: solid 0.5px rgba(180, 177, 177, 0.4);
+    border-right: solid 0.5px rgba(180, 177, 177, 0.4);
+}
+
+.second_blog_container .mini_post_container:first-child {
+    border-left: none;
+}
+
+.second_blog_container .mini_post_container:last-child {
+    border-right: none;
+}
+
+.second_blog_container .pic {
+    width: 100%;
+    height: 200px;
+    background: wheat;
+    text-align: center;
+}
+
+.second_blog_container .wrapper_text {
+    padding: 20px 0 0 0;
+}
+
+.second_blog_container .wrapper_text .title {
+    font-size: 30px;
+}
+
+.second_blog_container .wrapper_text .text {
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+/* advertising post */
+
+.advertising_post {
+    display: flex;
+    background: #F8D558;
+    color: black;
+    padding: 80px 120px;
+}
+
+.advertising_post .text_ad {
+    flex:1;
+}
+
+.advertising_post .pic_ad {
+    flex:1;
+    padding-left: 60px
+}
+
+.advertising_post .pic_ad img {
+    width: 100%;
+    height: 400px;
+}
+
+.text_ad h2 {
+    font-size: 80px;
+}
+
+.text_ad .btn {
+    margin-top: 50px;
+    width: 400px;
+    height: 80px;
+    font-size: 50px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.text_ad .btn:active {
+    background:rgb(49, 48, 48);
+}
+
+/* third block */
+
+.third_blog_container {
+    background: white;
+    color: black;
+    padding: 0 120px;
+}
+
+.linewrapper_medium_post_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.linewrapper_medium_post_container:last-child {
+    padding-bottom: 100px;
+}
+
+.linewrapper_medium_post_container .medium_post_container {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.medium_post_container .pic {
+    width: 100%;
+    height: 250px;
+    background: wheat;
+}
+
+
+.medium_post_container .wrapper_text .title {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.medium_post_container .wrapper_text .text {
+    padding-top: 15px;
+    font-size: 20px;
 }
