@@ -19,6 +19,10 @@ h1 {
     border-bottom: solid 1px rgba(255,255,255,0.4);
 }
 
+a:hover {
+    opacity: 0.5;
+}
+
 .main_blog_container {
     display: flex;
     justify-content: center;
@@ -35,11 +39,21 @@ h1 {
     height: 400px;
     background: wheat;
     margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.first_post_container .pic img {
+    width: 100%;
 }
 
 .first_post_container .wrapper_text .title {
     font-size: 40px;
     padding-bottom: 30px;
+}
+
+.first_post_container .wrapper_text .title a {
+    color: white;
+    text-decoration: none;
 }
 
 .first_post_container .wrapper_text .text {
@@ -72,6 +86,11 @@ h1 {
     font-size: 30px;
 }
 
+.second_post_container .wrapper_text .title a {
+    color: white;
+    text-decoration: none;
+}
+
 .second_post_container .wrapper_text .text {
     padding-top: 15px;
     font-size: 20px;
@@ -81,6 +100,11 @@ h1 {
     width: 250px;
     height: 150px;
     background: wheat;
+    overflow: hidden;
+}
+
+.second_post_container .pic img {
+    width: 100%;
 }
 
 .second_post_container .post_container {
@@ -105,18 +129,18 @@ h1 {
     padding: 80px 120px;
 }
 
-.second_blog_container .mini_post_container {
+.second_blog_container .post_container {
     flex: 1;
     padding: 0 30px;
     border-left: solid 0.5px rgba(180, 177, 177, 0.4);
     border-right: solid 0.5px rgba(180, 177, 177, 0.4);
 }
 
-.second_blog_container .mini_post_container:first-child {
+.second_blog_container .post_container:first-child {
     border-left: none;
 }
 
-.second_blog_container .mini_post_container:last-child {
+.second_blog_container .post_container:last-child {
     border-right: none;
 }
 
@@ -125,6 +149,11 @@ h1 {
     height: 200px;
     background: wheat;
     text-align: center;
+    overflow: hidden;
+}
+
+.second_blog_container .pic img {
+    width:100%;
 }
 
 .second_blog_container .wrapper_text {
@@ -134,6 +163,15 @@ h1 {
 .second_blog_container .wrapper_text .title {
     font-size: 30px;
 }
+
+.second_blog_container .wrapper_text .title a {
+    color: black;
+    text-decoration: none;
+}
+
+/* .second_blog_container .wrapper_text .title a:hover {
+    opacity: 0.5;
+} */
 
 .second_blog_container .wrapper_text .text {
     padding-top: 15px;
@@ -171,7 +209,7 @@ h1 {
     margin-top: 50px;
     width: 400px;
     height: 80px;
-    font-size: 50px;
+    font-size: 30px;
     background: black;
     color: white;
     cursor: pointer;
@@ -199,24 +237,33 @@ h1 {
     padding-bottom: 100px;
 }
 
-.linewrapper_medium_post_container .medium_post_container {
+.linewrapper_medium_post_container .post_container {
     flex: 1;
     padding: 0 40px;
 }
 
-.medium_post_container .pic {
+.third_blog_container .post_container .pic {
     width: 100%;
     height: 250px;
     background: wheat;
+    overflow: hidden;
 }
 
+.third_blog_container .post_container .pic img {
+    width: 100%;
+}
 
-.medium_post_container .wrapper_text .title {
+.third_blog_container .post_container .wrapper_text .title {
     padding-top: 20px;
     font-size: 30px;
 }
 
-.medium_post_container .wrapper_text .text {
+.third_blog_container .post_container .wrapper_text .title a {
+    color: black;
+    text-decoration: none;
+}
+
+.third_blog_container .post_container .wrapper_text .text {
     padding-top: 15px;
     font-size: 20px;
 }
