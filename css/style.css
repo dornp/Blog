@@ -49,6 +49,7 @@ a:hover {
 .first_post_container .wrapper_text .title {
     font-size: 40px;
     padding-bottom: 30px;
+    text-transform: capitalize;
 }
 
 .first_post_container .wrapper_text .title a {
@@ -84,6 +85,7 @@ a:hover {
 
 .second_post_container .wrapper_text .title {
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .second_post_container .wrapper_text .title a {
@@ -162,16 +164,13 @@ a:hover {
 
 .second_blog_container .wrapper_text .title {
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .second_blog_container .wrapper_text .title a {
     color: black;
     text-decoration: none;
 }
-
-/* .second_blog_container .wrapper_text .title a:hover {
-    opacity: 0.5;
-} */
 
 .second_blog_container .wrapper_text .text {
     padding-top: 15px;
@@ -256,6 +255,7 @@ a:hover {
 .third_blog_container .post_container .wrapper_text .title {
     padding-top: 20px;
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .third_blog_container .post_container .wrapper_text .title a {
