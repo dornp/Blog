@@ -5,7 +5,7 @@ function renderPost (arr, i) {
         </div>
         <div class="wrapper_text">
             <h2 class="title">
-                <a href="#">${arr[i].title}</a>
+                <a href="post.html?post_id=${arr[i].id}">${arr[i].title}</a>
             </h2>
             <p class="text">${arr[i].body}</p>
         </div>    
