@@ -287,8 +287,14 @@ a:hover {
 
 .post_page_container .title {
     font-size: 100px;
-    padding: 5% 30% 5% 5%;
+    padding: 5% 30% 50px 5%;
     text-transform: capitalize;
+}
+
+.post_page_container .author_info {
+    padding-left: 5%;
+    padding-bottom: 50px;
+    font-size: 30px;
 }
 
 .post_page_container .text {

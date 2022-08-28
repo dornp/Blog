@@ -1,6 +1,10 @@
-function createPost (obj, i) {
+function createPost (obj, objUser, i) {
     return `<div class="post_container">
         <h2 class="title">${obj.title}</h2>
+        <div class="author_info">
+            <p class="name">Author: ${objUser.name}</p>
+            <p class="city">City: ${objUser.address.city}</p>
+        </div>
         <div class="pic_and_text">
             <p class="text">${obj.body}</p>
             <div class="pic">
@@ -20,8 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         .then(response => response.json())
         .then(obj => {
-            let post = createPost(obj, postId)
-            postPageContainer.innerHTML = post;
-
+            fetch(`https://jsonplaceholder.typicode.com/users/${obj.userId}`)
+                .then(response => response.json())
+                .then(objUser => {
+                    let post = createPost(obj, objUser, postId)
+                    postPageContainer.innerHTML = post;
+                });
         });
+
+    
 });
