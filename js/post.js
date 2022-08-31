@@ -1,5 +1,8 @@
 function createPost (obj, objUser, i) {
     return `<div class="post_container">
+        <a href="/">
+            <img class="back" src="../img/left-arrow.png">
+        </a>
         <h2 class="title">${obj.title}</h2>
         <div class="author_info">
             <p class="name">Author: ${objUser.name}</p>
@@ -10,13 +13,14 @@ function createPost (obj, objUser, i) {
             <div class="pic">
                 <img src="img/${i}_img.jpg">
             </div>
-        </div>    
+        </div> 
     </div>`;          
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
     const postPageContainer = document.querySelector('.post_page_container');
+    const commentSection = document.querySelector('.comment_section');
 
     const param = window.location.search;
     const postId = param.substring(param.indexOf('=') + 1);
@@ -30,7 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     let post = createPost(obj, objUser, postId)
                     postPageContainer.innerHTML = post;
                 });
+            fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+                .then(response => response.json())
+                .then(arr => {
+                    let comments = '';
+                    arr.forEach(comment => {
+                        comments += `<div class="comment_wrap">
+                            <p class="comment_name">${comment.name}</p>
+                            <p class="comment_body">${comment.body}</p>
+                        </div>`;
+                    })
+                    commentSection.innerHTML = comments;
+                });
         });
 
-    
+   
 });

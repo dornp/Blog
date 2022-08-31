@@ -270,6 +270,13 @@ a:hover {
 
 /* post page */
 
+.back {
+    width: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-left: 5%;
+}
+
 .post_page_container {
     background:black;
     color:white;
@@ -287,7 +294,7 @@ a:hover {
 
 .post_page_container .title {
     font-size: 100px;
-    padding: 5% 30% 50px 5%;
+    padding: 0 30% 50px 5%;
     text-transform: capitalize;
 }
 

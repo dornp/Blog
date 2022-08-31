@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 firstBlockElements += post;
             }
+            console.log(firstBlockElements);
 
             for (let i = 4; i < 8; i++) {
                 let post = renderPost(arr, i);
