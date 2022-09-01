@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     let comments = '';
                     arr.forEach(comment => {
                         comments += `<div class="comment_wrap">
-                            <p class="comment_name">${comment.name}</p>
+                            <div class="photo_and_name">
+                                <img class="comment_photo" src="../img/user.png">
+                                <p class="comment_name">${comment.name}</p>
+                            </div>
                             <p class="comment_body">${comment.body}</p>
                         </div>`;
                     })

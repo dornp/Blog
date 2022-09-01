@@ -308,3 +308,40 @@ a:hover {
     font-size: 50px;
     padding-bottom: 50px;
 }
+
+/* Comments section */
+
+.title_comments {
+    font-size: 50px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 30px;
+}
+
+.comment_wrap {
+    padding: 30px 5%;
+    font-size: 25px;
+    border: 1px solid rgba(89, 87, 87, 0.2);
+}
+
+.comment_wrap:first-child {
+    border-top: none;
+}
+
+.comment_wrap:last-child {
+    border-bottom: none;
+}
+
+.photo_and_name {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.comment_photo {
+    width: 40px;
+}
+
+.comment_name {
+    padding-left: 20px;
+}
