@@ -17,10 +17,12 @@ function createPost (obj, objUser, i) {
     </div>`;          
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const postPageContainer = document.querySelector('.post_page_container');
     const commentSection = document.querySelector('.comment_section');
+    const recommendedPostsSection = document.querySelector('.recommended_posts_section');
 
     const param = window.location.search;
     const postId = param.substring(param.indexOf('=') + 1);
@@ -34,6 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     let post = createPost(obj, objUser, postId)
                     postPageContainer.innerHTML = post;
                 });
+            fetch(`https://jsonplaceholder.typicode.com/posts?userId=${obj.userId}`)
+                .then(response => response.json())
+                .then(userPosts => {
+                    let recommendedPosts = ''
+                    for (let i = 0; i < 5; i++) {
+                        recommendedPosts += `<div class="post_container">
+                            <div class="pic">
+                                <img src="img/${userPosts[i].id}_img.jpg">
+                            </div>
+                            <h2 class="title">
+                                <a href="post.html?post_id=${userPosts[i].id}">${userPosts[i].title}</a>
+                            </h2>
+                        </div>`
+                    }
+                    recommendedPostsSection.innerHTML = recommendedPosts;
+                })   
+            
             fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
                 .then(response => response.json())
                 .then(arr => {

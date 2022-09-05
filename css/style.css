@@ -149,7 +149,6 @@ a:hover {
 .second_blog_container .pic {
     width: 100%;
     height: 200px;
-    background: wheat;
     text-align: center;
     overflow: hidden;
 }
@@ -345,3 +344,55 @@ a:hover {
 .comment_name {
     padding-left: 20px;
 }
+
+/* recommended posts */
+
+.title_recommended {
+    background: #F8D558;
+    font-size: 50px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 50px;
+}
+
+.recommended_posts_section {
+    padding: 0 5% 5% 5%;
+    display: flex;
+    background: #F8D558;
+    justify-content: center;
+}
+
+.recommended_posts_section .post_container {
+    flex: 1;
+    padding: 0 30px;
+    border-left: solid 0.5px rgba(83, 81, 81, 0.4);
+    border-right: solid 0.5px rgba(83, 81, 81, 0.4);
+}
+
+.recommended_posts_section .post_container:first-child {
+    border-left: none;
+}
+
+.recommended_posts_section .post_container:last-child {
+    border-right: none;
+}
+
+.recommended_posts_section .pic {
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.recommended_posts_section .pic img {
+    width:100%;
+    height: 100%;
+}
+
+.recommended_posts_section a {
+    text-decoration: none;
+    color: black;
+}
+
+
