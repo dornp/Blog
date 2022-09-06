@@ -40,13 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(response => response.json())
                 .then(userPosts => {
                     let recommendedPosts = ''
+                    let newArr = userPosts.filter(obj => {
+                        // if (Number(obj.id) !== Number(postId)) {
+                        //     return true;
+                        // } else {
+                        //     return false;
+                        // }
+                        return Number(obj.id) !== Number(postId);
+                    });
+
                     for (let i = 0; i < 5; i++) {
                         recommendedPosts += `<div class="post_container">
                             <div class="pic">
-                                <img src="img/${userPosts[i].id}_img.jpg">
+                                <img src="img/${newArr[i].id}_img.jpg">
                             </div>
                             <h2 class="title">
-                                <a href="post.html?post_id=${userPosts[i].id}">${userPosts[i].title}</a>
+                                <a href="post.html?post_id=${newArr[i].id}">${newArr[i].title}</a>
                             </h2>
                         </div>`
                     }
