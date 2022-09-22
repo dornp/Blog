@@ -96,6 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchUserPosts(obj, recommendedPostsSection, postId);
         fetchComments (postId, commentSection);
     });
-
-   
 });
