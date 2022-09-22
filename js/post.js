@@ -72,7 +72,7 @@ function fetchComments (postId, commentSection) {
             arr.forEach(comment => {
                 comments += `<div class="comment_wrap">
                     <div class="photo_and_name">
-                        <img class="comment_photo" src="../img/user.png">
+                        <img class="comment_photo" src="img/user.png">
                         <p class="comment_name">${comment.name}</p>
                     </div>
                     <p class="comment_body">${comment.body}</p>
