@@ -1,7 +1,7 @@
 function createPost (obj, objUser, i) {
     return `<div class="post_container">
         <a href="/">
-            <img class="back" src="../img/left-arrow.png">
+            <img class="back" src="img/left-arrow.png">
         </a>
         <h2 class="title">${obj.title}</h2>
         <div class="author_info">
